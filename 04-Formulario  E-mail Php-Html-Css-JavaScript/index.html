@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--Autor @Brunno Henrique Vilas Boas-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/formulario.css" type="text/css">
+
+
+    <title>Contato Whatsapp</title>
+</head>
+<body>
+   
+   
+    <div class="row" id="area"></div>
+
+
+        <section class="form-section">
+
+        <form action="php/enviar-email.php" method="POST">
+        <br>
+        <div class="input-block">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome"  required maxlength="35" minlength="2"   placeholder="Seu nome"
+            autocomplete="off" size="38"
+            style="height: 36px;font: size 1px;">
+
+        </div>
+
+
+        <div class="input-block">
+            <label for="email">E-mail</label>
+
+            <p><input type="text" name="email" id="email" placeholder="Seu e-mail"
+            autocomplete="off"  size="38"
+            style="height: 36px" ></p>
+
+            <span></span>
+
+        </div>
+
+        <div class="input-block">
+        <label for="telefone">Telefone</label>
+
+  <p>  <input type="text" name="telefone" id="telefone" placeholder="Telefone / WhatsApp" autocomplete="off"size="38" style="height: 36px"         ></p>
+        </div>
+
+
+        <div class="input-block">
+            
+            <select name="assunto" id="assunto" 
+            >>       <option value="" selected="selected" >*Escolha o assunto* </option>
+            <option>*Suporte tecnico </option>
+            <option>*Contratação de plano </option>
+            <option>*Instalação Internet </option>                </select>
+            
+        </div>
+
+        <div class="input-block">
+            
+            
+            
+            <label for="mensagem">Mensagem</label>            
+            <textarea name="mensagem" id="mensagem" rows="5" cols="45" 
+             placeholder="Escreva aqui sua mensagem"></textarea>
+             <span></span>
+
+        </div>
+
+
+        <div class="input-block">
+            <p><button id="send"  class="botaoenviar" style="background-color:#6495ED;height:40px;width: 300px;" >Enviar Formulário</button></p>
+        </div>
+</form>
+        </section>
+ 
+
+<!--Scripts conectados-->
+<script src="mascaratelefone.js"></script>
+
+
+</html>
