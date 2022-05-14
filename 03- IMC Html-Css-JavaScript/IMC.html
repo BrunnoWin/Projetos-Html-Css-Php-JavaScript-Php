@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IMC</title>
+
+<style>
+body{
+
+    background-color: #000000;
+    color: #f0f8ff;
+    text-align: center;
+    position: absolute;
+    width:100%;
+
+}
+
+#saida{
+
+background-color:#000000;
+color: #f0f8ff;
+border-radius: 5px;
+padding:13px;
+
+}
+
+
+#corfundoresultado{
+background-color: f0f8ff;
+
+}
+
+table{
+
+border-radius: 5px;
+border-color: #f0f8ff;
+background-color: #A9A9A9;
+border: 1px;;
+align-items: center;
+
+}
+form{
+display: inline-block;
+position: relative;
+}
+
+#editarbotaocalcular{
+
+    width:180px;
+    border-radius:10px ;
+    border-color: #32CD32	;
+    background-color: #32CD32	;
+    height: 30;
+}
+
+
+
+</style>
+
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>
+    
+<p>Peso:   <input type="tex" name="peso" placeholder="Exemplo:63.30"></p>
+<p>Altura: <input type="text" name="altura" placeholder="Exemplo:1.80"></p>
+<p> <input type="button" id="editarbotaocalcular" name="btnconver" value="Calcular" onclick="
+var imc = (peso.value/(altura.value*altura.value));
+if(imc < 17){mensagem = 'Muito abaixo do peso.';}
+else if(imc >= 17 && imc <=18.49){mensagem = 'Abaixo do peso.';}
+else if(imc >= 18.5 && imc <= 24.99){mensagem = 'Peso normal.';}
+else if(imc >= 25 && imc <= 29.99){mensagem = 'Acima do peso.';}
+else if(imc >= 30 && imc <= 34.99){mensagem = 'Obesidade I.';}
+else if(imc >= 35 && imc <= 39.99){mensagem = 'Obesidade II (Severa).';}
+else if(imc > 40){mensagem = 'Obesidade III (Mórbida).';} document.getElementById('saida').innerHTML = 'Seu I.M.C é: '+(imc).toFixed(2); document.getElementById('msg').innerHTML = mensagem; "></p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="saida">Seu I.M.C é: </p>
+<p id="msg"></p>
+</td>
+</tr>
+</table>
+</form></body>
+</html>
+
